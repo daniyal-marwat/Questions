@@ -1,0 +1,229 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: hidden;
+  transform: translateY(-10%);
+}
+main {
+  /* max-width: 720px; */
+  padding-inline: 40px;
+  display: flex;
+}
+.number_icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: rgb(1, 66, 172);
+  fill: rgb(1, 66, 172);
+  height: 100%;
+  margin-right: 12px;
+  transform: translateY(5px);
+}
+.arrow_icon_small {
+  display: none;
+}
+.main_content_wrapper {
+  max-width: 720px;
+}
+.main_text {
+  font-size: 24px;
+  line-height: 32px;
+  cursor: default;
+}
+.text_drag_drop_container {
+  color: rgb(1, 66, 172);
+  margin-top: 32px;
+}
+.text_drag_drop {
+  margin-bottom: 16px;
+  line-height: 24px;
+}
+.drag_drop_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  /* width: fit-content; */
+  gap: 8px;
+}
+.drag_drop_list_item {
+  max-width: 173px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(1, 66, 172, 0.1);
+  box-shadow: rgba(1, 66, 172, 0.6) 0px 0px 0px 1px inset;
+  padding-block: 6px;
+  padding-inline: 8px 12px;
+  border-radius: 4px;
+  transition: background-color, 0.1s, ease-out;
+  cursor: grab;
+  user-select: none;
+  font-size: 20px;
+}
+.drag_drop_list_item:hover {
+  background-color: rgb(1, 66, 172, 0.3);
+}
+.drop_down_select_text_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.select_box_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 8px;
+  cursor: default;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(1, 66, 172, 0.6);
+  border-radius: 2px;
+  fill: rgb(1, 66, 172);
+  gap: 8px;
+  position: relative;
+  /* height: 24px; */
+}
+.drop_menu_option_selected {
+  font-size: 12px;
+}
+.dropdown-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: rgba(1, 66, 172, 0.6) 0px 0px 0px 1px inset;
+  width: 100%;
+  background-color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  display: none;
+}
+.dropdown-menu_option {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.dropdown-menu_option:hover {
+  background-color: rgba(1, 66, 172, 0.3);
+}
+.text_clear {
+  display: none;
+  font-size: 16px;
+  margin-top: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.button_text_container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+
+  /* justify-content: center; */
+}
+button {
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgb(1, 66, 172);
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+  padding-inline: 14px;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 20px;
+  transition: background-color, 0.1s;
+}
+button:hover {
+  background-color: rgb(39, 94, 184);
+}
+.button_text_container p {
+  font-size: 12px;
+  line-height: 16px;
+}
+.button_text_container strong {
+  letter-spacing: 0.2px;
+}
+
+/* Classes */
+.selected {
+  background-color: rgb(1, 66, 172, 0.3);
+  /* transform: translateY(48px); */
+}
+.select_box_container.drop_down_show .dropdown-menu {
+  display: flex;
+}
+
+/* Media querries */
+@media (max-width: 1024px) {
+  main {
+    padding-inline: 80px;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    padding-inline: 40px;
+    padding-inline-start: 20px;
+  }
+  .number_icon_container {
+    font-size: 14px;
+    gap: 2px;
+  }
+  .arrow_icon_small {
+    display: block;
+  }
+  .arrow_icon_big {
+    display: none;
+  }
+  .main_text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .drag_drop_list_item {
+    font-size: 16px;
+    max-width: 168px;
+  }
+  .text_drag_drop {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .text_clear {
+    font-size: 14px;
+  }
+  .button_text_container {
+    padding: 0 16px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  .button_text_container p {
+    display: none;
+  }
+  button {
+    width: 100%;
+  }
+}

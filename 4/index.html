@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 4</title>
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"
+    ></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="number_icon_container">
+        <span>4</span>
+        <svg height="8" width="7" class="arrow_icon_small">
+          <path d="M5 3.5v1.001H-.002v-1z"></path>
+          <path
+            d="M4.998 4L2.495 1.477 3.2.782 6.416 4 3.199 7.252l-.704-.709z"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          class="arrow_icon_big"
+        >
+          <path
+            d="M8.47 1.97a.75.75 0 0 1 1.06 0l4.897 4.896a1.25 1.25 0 0 1 0 1.768L9.53 13.53a.75.75 0 0 1-1.06-1.06l3.97-3.97H1.75a.75.75 0 1 1 0-1.5h10.69L8.47 3.03a.75.75 0 0 1 0-1.06"
+          ></path>
+        </svg>
+      </div>
+      <div class="main_content_wrapper">
+        <div class="main_text_container">
+          <p class="main_text">
+            If you could please help rank the companies based on their
+            importance and impact in the electric vehicles market
+          </p>
+        </div>
+        <div class="text_drag_drop_container">
+          <p class="text_drag_drop">Drag and drop to rank options</p>
+          <div class="drag_drop_container">
+            <ul class="drag_drop_list">
+              <li class="drag_drop_list_item">
+                <div class="drop_down_select_text_container">
+                  <div class="select_box_container">
+                    <div class="drop_menu_option_selected">-</div>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M3.293 8.293a1 1 0 0 1 1.414 0L12 15.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 17a2 2 0 0 1-2.828 0L3.293 9.707a1 1 0 0 1 0-1.414"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                      <div class="dropdown-menu_option" data-value="1">1</div>
+                      <div class="dropdown-menu_option" data-value="2">2</div>
+                      <div class="dropdown-menu_option" data-value="3">3</div>
+                    </div>
+                  </div>
+                  <p>Tesla</p>
+                </div>
+                <div class="drop_down_icon">
+                  <svg height="14" viewBox="0 0 10 14" width="10">
+                    <g fill="currentColor">
+                      <circle cx="2" cy="2" r="1.5"></circle>
+                      <circle cx="2" cy="7" r="1.5"></circle>
+                      <circle cx="2" cy="12" r="1.5"></circle>
+                      <circle cx="8" cy="2" r="1.5"></circle>
+                      <circle cx="8" cy="7" r="1.5"></circle>
+                      <circle cx="8" cy="12" r="1.5"></circle>
+                    </g>
+                  </svg>
+                </div>
+              </li>
+              <li class="drag_drop_list_item">
+                <div class="drop_down_select_text_container">
+                  <div class="select_box_container">
+                    <div class="drop_menu_option_selected">-</div>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M3.293 8.293a1 1 0 0 1 1.414 0L12 15.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 17a2 2 0 0 1-2.828 0L3.293 9.707a1 1 0 0 1 0-1.414"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                      <div class="dropdown-menu_option" data-value="1">1</div>
+                      <div class="dropdown-menu_option" data-value="2">2</div>
+                      <div class="dropdown-menu_option" data-value="3">3</div>
+                    </div>
+                  </div>
+                  <p>Ford</p>
+                </div>
+                <div class="drop_down_icon">
+                  <svg height="14" viewBox="0 0 10 14" width="10">
+                    <g fill="currentColor">
+                      <circle cx="2" cy="2" r="1.5"></circle>
+                      <circle cx="2" cy="7" r="1.5"></circle>
+                      <circle cx="2" cy="12" r="1.5"></circle>
+                      <circle cx="8" cy="2" r="1.5"></circle>
+                      <circle cx="8" cy="7" r="1.5"></circle>
+                      <circle cx="8" cy="12" r="1.5"></circle>
+                    </g>
+                  </svg>
+                </div>
+              </li>
+              <li class="drag_drop_list_item">
+                <div class="drop_down_select_text_container">
+                  <div class="select_box_container">
+                    <div class="drop_menu_option_selected">-</div>
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="12"
+                        height="12"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          d="M3.293 8.293a1 1 0 0 1 1.414 0L12 15.586l7.293-7.293a1 1 0 1 1 1.414 1.414L13.414 17a2 2 0 0 1-2.828 0L3.293 9.707a1 1 0 0 1 0-1.414"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                      <div class="dropdown-menu_option" data-value="1">1</div>
+                      <div class="dropdown-menu_option" data-value="2">2</div>
+                      <div class="dropdown-menu_option" data-value="3">3</div>
+                    </div>
+                  </div>
+                  <p>BYD</p>
+                </div>
+                <div class="drop_down_icon">
+                  <svg height="14" viewBox="0 0 10 14" width="10">
+                    <g fill="currentColor">
+                      <circle cx="2" cy="2" r="1.5"></circle>
+                      <circle cx="2" cy="7" r="1.5"></circle>
+                      <circle cx="2" cy="12" r="1.5"></circle>
+                      <circle cx="8" cy="2" r="1.5"></circle>
+                      <circle cx="8" cy="7" r="1.5"></circle>
+                      <circle cx="8" cy="12" r="1.5"></circle>
+                    </g>
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="text_clear">Clear all</p>
+        </div>
+        <div class="button_text_container">
+          <button>OK</button>
+          <p>press <strong>Enter ↵</strong></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,221 @@
+:root {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 80px;
+  overflow-y: hidden;
+  transform: translateY(-10%);
+}
+main {
+  max-width: 720px;
+  position: relative;
+}
+.main_text {
+  font-size: 24px;
+  line-height: 32px;
+  cursor: default;
+}
+
+/* Selection */
+.selection_container {
+  margin-top: 32px;
+}
+.selection_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+}
+.selection_list_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(1, 66, 172);
+  box-shadow: rgba(1, 66, 172, 0.6) 0px 0px 0px 1px inset;
+  background-color: rgba(1, 66, 172, 0.1);
+  padding: 4px 0 4px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  user-select: none;
+  /* transition: background-color, 0.1s, ease-out; */
+}
+.selection_list_item:hover {
+  background-color: rgba(1, 66, 172, 0.3);
+}
+.selection_letter_text_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selection_letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: rgba(1, 66, 172, 0.6) 0px 0px 0px 1px inset;
+  border-radius: 2px;
+  height: 22px;
+  width: 22px;
+  margin: 4px 8px 4px 8px;
+}
+.selection_text {
+  font-size: 20px;
+}
+.slection_icon_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-right: 4px;
+  visibility: hidden;
+  opacity: 0;
+  fill: rgb(1, 66, 172);
+  padding-inline: 8px 10px;
+  height: 30px;
+}
+/*  */
+button {
+  font-weight: 700;
+  cursor: pointer;
+  background-color: rgb(1, 66, 172);
+  text-transform: uppercase;
+  border: none;
+  color: #fff;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+  padding-inline: 14px;
+  border-radius: 4px;
+  height: 40px;
+  font-size: 20px;
+  transition: background-color, 0.1s;
+  margin-top: 16px;
+  font-family: inherit;
+}
+button:hover {
+  background-color: rgb(39, 94, 184);
+}
+.number_icon_container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  left: -40px;
+  color: rgb(1, 66, 172);
+  gap: 4px;
+  fill: rgb(1, 66, 172);
+}
+.number_icon_container svg {
+  fill: inherit;
+  /* fill: rgb(1, 66, 172); */
+}
+.arrow_icon_small {
+  display: none;
+}
+.selection_other_edit_input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: rgb(1, 66, 172);
+  font-size: 20px;
+  display: none;
+  max-width: 200px;
+}
+.selection_other_edit_input::placeholder {
+  color: rgb(1, 66, 172, 0.8);
+  font-size: 16px;
+}
+
+/* Classes */
+
+/* Style for the selected option */
+.selected {
+  box-shadow: rgba(1, 66, 172, 0.8) 0px 0px 0px 2px inset;
+}
+.selection_list_item.selected .selection_letter {
+  color: #fff;
+  background-color: rgb(1, 66, 172);
+}
+.selection_list_item.selected .slection_icon_container {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Style for the selection of edit option */
+.selection_list_item_edit.selected {
+  background-color: rgba(1, 66, 172, 0.3);
+}
+.selection_list_item_edit.selected .selection_letter {
+  color: rgb(1, 66, 172);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.selection_list_item_edit.selected .slection_icon_container {
+  visibility: visible;
+  opacity: 1;
+  background: rgb(1, 66, 172);
+  fill: #fff;
+}
+.selection_list_item_edit.selected .selection_other_edit_input {
+  display: block;
+}
+.selection_list_item_edit.selected .selection_text {
+  display: none;
+}
+
+/* Media querries */
+@media (max-width: 760px) {
+  .selection_text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    padding-inline: 40px;
+  }
+  .main_text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .button_container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 16px;
+    width: 100%;
+  }
+  button {
+    width: 100%;
+  }
+  .number_icon_container {
+    font-size: 14px;
+    left: -28px;
+    gap: 2px;
+  }
+  .arrow_icon_small {
+    display: block;
+  }
+  .arrow_icon_big {
+    display: none;
+  }
+  /* .number_icon_container svg {
+    height: 8px;
+    width: 7px;
+  } */
+}
